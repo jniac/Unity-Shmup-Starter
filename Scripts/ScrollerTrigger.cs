@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum ScrollTriggerType
 {
-    RANDOM_WAVES,
-    BOSS_1,
+    RANDOM_WAVE,
+    BOSS,
+    SUPER_BOSS,
 }
 
 public class ScrollerTrigger : MonoBehaviour

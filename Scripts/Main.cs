@@ -22,8 +22,10 @@ public class Main : MonoBehaviour
         instance = this;
     }
 
-    public void ScrollCall(ScrollerTrigger scrollTriggerType)
+    public void ScrollCall(ScrollerTrigger trigger)
     {
+        Destroy(trigger.gameObject);
+
         var go = Resources.Load<Scroller>("Scroller-Sequence1");
         Instantiate(go);
     }
