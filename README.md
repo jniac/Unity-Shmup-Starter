@@ -1,5 +1,9 @@
 # Unity-Shmup-Starter
 
-# NB :
+## NB :
 Ne pas oublier de régler les collisions :  
+- Layer (Inspector > Layer > Add Layer):
+![](https://i.imgur.com/eIshOkh.png)
+
+- Collision matrix (Project Settings > Physics)
 ![](https://i.imgur.com/MxERrAr.png)
