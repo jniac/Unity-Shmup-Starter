@@ -9,7 +9,7 @@ using UnityEditor;
 [ExecuteAlways]
 public class Stage : MonoBehaviour
 {
-    public static Stage stage;
+    public static Stage instance;
 
     public float width = 16;
     public float height = 9;
@@ -18,7 +18,7 @@ public class Stage : MonoBehaviour
 
     void OnEnable()
     {
-        stage = this;
+        instance = this;
     }
 
     public bool Contains(float x, float y, float padding = 0)

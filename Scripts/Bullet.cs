@@ -32,8 +32,8 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
 
-        Explosion.explosion.transform.position = transform.position;
-        Explosion.explosion.Fire();
+        Explosion.instance.transform.position = transform.position;
+        Explosion.instance.Fire();
 
         Life life = other.GetComponentInParent<Life>();
         if (life != null)

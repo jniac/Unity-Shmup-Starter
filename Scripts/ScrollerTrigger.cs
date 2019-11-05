@@ -18,7 +18,7 @@ public class ScrollerTrigger : MonoBehaviour
     void Update()
     {
         stagedOld = staged;
-        staged = Stage.stage.SpawnContains(transform.position);
+        staged = Stage.instance.SpawnContains(transform.position);
 
         if (Application.isPlaying)
             if (staged && !stagedOld)
@@ -27,7 +27,7 @@ public class ScrollerTrigger : MonoBehaviour
 
     void Fire()
     {
-        Main.main.ScrollCall(this);
+        Main.Instance.ScrollCall(this);
     }
 
     void OnDrawGizmos()

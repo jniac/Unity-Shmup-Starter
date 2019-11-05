@@ -3,11 +3,23 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-    public static Main main;
+    public static Main Instance => GetMain();
+
+    static Main instance;
+    public static Main GetMain()
+    {
+        if (!instance)
+        {
+            var go = new GameObject("Main");
+            go.AddComponent<Main>();
+        }
+
+        return instance;
+    }
 
     void OnEnable()
     {
-        main = this;
+        instance = this;
     }
 
     public void ScrollCall(ScrollerTrigger scrollTriggerType)

@@ -18,7 +18,7 @@ public class ScrollerSpawner : MonoBehaviour
     void Update()
     {
         stagedOld = staged;
-        staged = Stage.stage.SpawnContains(transform.position);
+        staged = Stage.instance.SpawnContains(transform.position);
 
         if (Application.isPlaying)
             if (staged && !stagedOld)
@@ -38,7 +38,7 @@ public class ScrollerSpawner : MonoBehaviour
     {
         Gizmos.color = staged ? Color.red : Color.yellow;
 
-        Gizmos.DrawSphere(transform.position, .1f);
+        Gizmos.DrawSphere(transform.position, .2f);
         Gizmos.DrawRay(transform.position, velocity);
     }
 

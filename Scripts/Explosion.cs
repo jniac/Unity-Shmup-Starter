@@ -6,7 +6,7 @@ public class Explosion : MonoBehaviour
 {
     // expose l'instance unique de [Explosion]
     // à travers une propriété statique (singleton)
-    public static Explosion explosion;
+    public static Explosion instance;
 
 
 
@@ -20,7 +20,7 @@ public class Explosion : MonoBehaviour
 
     private void Awake()
     {
-        explosion = this;
+        instance = this;
     }
 
     public GameObject RandomPick()
