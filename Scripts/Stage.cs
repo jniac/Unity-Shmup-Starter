@@ -91,27 +91,27 @@ public class Stage : MonoBehaviour
         Handles.Label(Vector3.up * (height / 2 + killPadding), "Stage - Kill", style);
     }
 
-    [CustomEditor(typeof(Stage))]
-    class MyEditor : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
+    //[CustomEditor(typeof(Stage))]
+    //class MyEditor : Editor
+    //{
+    //    public override void OnInspectorGUI()
+    //    {
+    //        base.OnInspectorGUI();
 
-            EditorGUILayout.Space(20);
-            EditorGUILayout.LabelField("[DEBUG]");
-            if (GUILayout.Button("Remove HideInHierarchy GameObjects"))
-            {
-                var array = FindObjectsOfType<GameObject>();
+    //        EditorGUILayout.Space(20);
+    //        EditorGUILayout.LabelField("[DEBUG]");
+    //        if (GUILayout.Button("Remove HideInHierarchy GameObjects"))
+    //        {
+    //            var array = FindObjectsOfType<GameObject>();
 
-                foreach(var go in array)
-                {
-                    Debug.Log($"{go}: {go.hideFlags}");
-                    if (go.hideFlags.HasFlag(HideFlags.HideInHierarchy))
-                        DestroyImmediate(go);
-                }
-            }
-        }
-    }
+    //            foreach(var go in array)
+    //            {
+    //                Debug.Log($"{go}: {go.hideFlags}");
+    //                if (go.hideFlags.HasFlag(HideFlags.HideInHierarchy))
+    //                    DestroyImmediate(go);
+    //            }
+    //        }
+    //    }
+    //}
 #endif
 }
